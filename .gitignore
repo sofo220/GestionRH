@@ -1,0 +1,11 @@
+target/
+node_modules/
+dist/
+.env
+.idea/
+.vscode/
+*.log
+debug-*.png
+tools/
+database/pgdata/
+database/pgpass.txt
