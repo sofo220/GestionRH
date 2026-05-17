@@ -68,7 +68,7 @@ mvn spring-boot:run
 ```
 
 API disponible sur `http://localhost:8080`.
-Documentation Swagger disponible sur `http://localhost:8080/swagger-ui.html`.
+
 
 Compte de test :
 
