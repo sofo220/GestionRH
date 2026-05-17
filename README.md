@@ -38,9 +38,9 @@ Les captures sont dans `portfolio-screenshots/` :
 ## Prerequis
 
 - Java 17+
-- Maven 3.9+ ou le Maven portable fourni dans `tools/apache-maven-3.9.9`
+- Maven 3.9+
 - Node.js 18+
-- PostgreSQL 14+ ou le PostgreSQL portable fourni dans `tools/postgresql`
+- PostgreSQL 14+
 
 ## Base de donnees
 
@@ -56,14 +56,6 @@ Puis importer :
 psql -U postgres -d gestion_rh -f database/schema.sql
 ```
 
-Avec PostgreSQL portable deja installe dans ce projet :
-
-```powershell
-.\scripts\start-postgres.ps1
-.\tools\postgresql\pgsql\bin\createdb.exe -U postgres gestion_rh
-.\tools\postgresql\pgsql\bin\psql.exe -U postgres -d gestion_rh -f database\schema.sql
-```
-
 ## Backend
 
 Configurer si besoin `backend/src/main/resources/application.yml`.
@@ -72,7 +64,7 @@ Lancer :
 
 ```bash
 cd backend
-..\tools\apache-maven-3.9.9\bin\mvn.cmd spring-boot:run
+mvn spring-boot:run
 ```
 
 API disponible sur `http://localhost:8080`.
@@ -94,31 +86,6 @@ npm run dev
 ```
 
 Interface disponible sur `http://localhost:5173`.
-
-## Lancement rapide local
-
-```powershell
-.\scripts\start-all.ps1
-```
-
-Puis ouvrir `http://127.0.0.1:5173`.
-
-## Deploiement Oracle Cloud
-
-Les fichiers pour Oracle Cloud sont inclus :
-
-- `docker-compose.yml`
-- `backend/Dockerfile`
-- `frontend/Dockerfile`
-- `frontend/nginx.conf`
-- `deploy/oracle-cloud-setup.sh`
-- `deploy/ORACLE_CLOUD_DEPLOYMENT.md`
-
-Guide complet :
-
-```text
-deploy/ORACLE_CLOUD_DEPLOYMENT.md
-```
 
 ## API principales
 
